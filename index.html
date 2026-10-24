@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EASY WIN BET</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #07130f;
+      color: #fff;
+    }
+    header {
+      background: #10251b;
+      padding: 20px;
+      border-bottom: 2px solid #b9f542;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { font-size: 25px; font-weight: bold; }
+    .logo span { color: #b9f542; }
+    nav a { color: white; text-decoration: none; margin: 8px; }
+    .hero {
+      padding: 55px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #173c28, #07130f);
+    }
+    .hero h1 { font-size: 38px; margin-bottom: 10px; }
+    .hero p { color: #c7d4cb; }
+    .btn {
+      display: inline-block;
+      background: #b9f542;
+      color: #102014;
+      padding: 13px 20px;
+      border-radius: 7px;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+    main { max-width: 950px; margin: auto; padding: 22px; }
+    h2 { color: #b9f542; }
+    .notice {
+      padding: 14px;
+      border: 1px solid #b9f542;
+      border-radius: 8px;
+      color: #e6f5dc;
+      margin: 20px 0;
+    }
+    .matches {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 15px;
+    }
+    .card {
+      background: #10251b;
+      border: 1px solid #294b37;
+      border-radius: 10px;
+      padding: 18px;
+    }
+    .teams { font-size: 17px; font-weight: bold; }
+    .demo {
+      display: inline-block;
+      background: #263e2c;
+      padding: 9px 12px;
+      margin-top: 10px;
+      border-radius: 5px;
+      color: #b9f542;
+    }
+    .contact { margin-top: 35px; }
+    label { display: block; margin: 12px 0 6px; }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #45604b;
+      background: #0b1911;
+      color: white;
+    }
+    footer {
+      padding: 25px;
+      text-align: center;
+      color: #b6c4ba;
+      background: #10251b;
+      margin-top: 35px;
+    }
+    .small { font-size: 13px; line-height: 1.6; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">EASY <span>WIN</span> BET</div>
+    <nav>
+      <a href="#matches">Matches</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>WELCOME TO EASY WIN BET</h1>
+    <p>Your football match information hub.</p>
+    <a class="btn" href="#matches">Explore Matches</a>
+  </section>
+
+  <main>
+    <div class="notice">
+      <strong>DEMO WEBSITE</strong><br>
+      This is a demonstration only. Match listings and sample odds
+      below are fictional and are not live betting offers.
+      No deposits or real-money bets are accepted.
+    </div>
+
+    <section id="matches">
+      <h2>Featured Football Matches</h2>
+      <div class="matches">
+        <div class="card">
+          <div class="teams">Home Team A vs Away Team A</div>
+          <p>Sample match · Demo odds</p>
+          <span class="demo">Home 1.80</span>
+          <span class="demo">Draw 3.20</span>
+          <span class="demo">Away 4.00</span>
+        </div>
+        <div class="card">
+          <div class="teams">Home Team B vs Away Team B</div>
+          <p>Sample match · Demo odds</p>
+          <span class="demo">Home 2.10</span>
+          <span class="demo">Draw 3.10</span>
+          <span class="demo">Away 3.00</span>
+        </div>
+        <div class="card">
+          <div class="teams">Home Team C vs Away Team C</div>
+          <p>Sample match · Demo odds</p>
+          <span class="demo">Home 1.95</span>
+          <span class="demo">Draw 3.40</span>
+          <span class="demo">Away 3.60</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About EASY WIN BET</h2>
+      <p>
+        EASY WIN BET is a football information website concept
+        designed with a clean, mobile-friendly layout.
+      </p>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>This sample form does not send or store messages yet.</p>
+      <form id="contactForm">
+        <label for="name">Your name</label>
+        <input id="name" required placeholder="Enter your name">
+
+        <label for="email">Email address</label>
+        <input id="email" type="email" required placeholder="Enter your email">
+
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" required placeholder="Write your message"></textarea>
+
+        <p><button class="btn" type="submit">Test Contact Form</button></p>
+      </form>
+      <p id="result" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>EASY WIN BET</strong></p>
+    <p class="small">
+      Demonstration website only. No real-money gambling is available.
+      Any future betting service must meet applicable Kenyan licensing,
+      age-verification, consumer-protection and payment requirements.
+    </p>
+    <p>&copy; 2026 EASY WIN BET</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      document.getElementById("result").textContent =
+        "Demo only: your message was not sent or saved.";
+    });
+  </script>
+</body>
+</html>
